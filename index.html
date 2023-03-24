@@ -3,14 +3,16 @@
   <head>
     <title>Interactive Character Example</title>
     <style>
-      .character {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        background-color: #0077FF;
-      }
+.character {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #0077FF;
+}
+
     </style>
   </head>
   <body>
@@ -18,16 +20,23 @@
 
     <script>
       var character = document.querySelector('.character');
+      var positionX = 0;
 
       function moveCharacter() {
-        character.style.left = parseInt(character.style.left) + 10 + 'px';
+        character.style.left = positionX + 'px';
       }
 
       document.addEventListener('keydown', function(event) {
-        if (event.key === 'a') {
+        if (event.key === 'ArrowRight') {
+          positionX += 10;
+          moveCharacter();
+        }
+		if (event.key === 'a') {
+          positionX -= 10;
           moveCharacter();
         }
       });
     </script>
   </body>
 </html>
+
