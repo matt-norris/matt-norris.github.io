@@ -7,7 +7,22 @@
   <title>matt-norris</title>
   <!-- Add your CSS and JavaScript files here -->
   <link rel="stylesheet" href="styles.css">
- 
+  <script src="sketch.js"></script>
+  <style>
+    .hero {
+        margin-top: 10px;
+        position: relative;
+    }
+    #skills-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%; /* Adjust the width to your desired size */
+        height: 100%;
+        border-radius: 10px;
+        
+    }
+</style>
 </head> 
 <body>
   <!-- Header -->
@@ -41,11 +56,14 @@
 
   <section class="hero" style="margin-top: 10px; position: relative;">
     <h2 style="position: absolute; top: 0; left: 0;">Skills</h2>
-    <p>Placeholder.</p>
-    <div id="word-cloud">
-      <span class="word">Python</span>
-      <!-- Add more skill words as needed -->
+    <div class="content">
+      <p>Placeholder.</p>
+      <div id="word-cloud">
+        <span class="word">Python</span>
+        <!-- Add more skill words as needed -->
+      </div>
     </div>
+    <div id="skills-container" style="background-image: url('/Assets/crawl.png');"></div>
   </section>
 
   <section class="hero" style="margin-top: 10px; position: relative;">
@@ -70,4 +88,6 @@
 
 </body>
 <script src="scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
 </html>
