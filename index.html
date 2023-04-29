@@ -8,6 +8,7 @@
   <!-- Add your CSS and JavaScript files here -->
   <link rel="stylesheet" href="styles.css">
   <script src="sketch.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   <style>
     .hero {
         margin-top: 10px;
@@ -26,16 +27,29 @@
 </head> 
 <body>
   <!-- Header -->
-  <header class="header">
-    <h1>Placeholder</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Placeholder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -48,20 +62,14 @@
   <section class="hero" style="margin-top: 10px; position: relative;">
     <h2 style="position: absolute; top: 0; left: 0;">Education</h2>
     <p>Placeholder.</p>
-    <div id="word-cloud">
-      <span class="word">Python</span>
-      <!-- Add more skill words as needed -->
-    </div>
+
   </section>
 
   <section class="hero" style="margin-top: 10px; position: relative;">
     <h2 style="position: absolute; top: 0; left: 0;">Skills</h2>
     <div class="content">
       <p>Placeholder.</p>
-      <div id="word-cloud">
-        <span class="word">Python</span>
-        <!-- Add more skill words as needed -->
-      </div>
+   
     </div>
     <div id="skills-container" style="background-image: url('/Assets/crawl.png');"></div>
   </section>
@@ -69,19 +77,13 @@
   <section class="hero" style="margin-top: 10px; position: relative;">
     <h2 style="position: absolute; top: 0; left: 0;">Work Experience</h2>
     <p>Placeholder.</p>
-    <div id="word-cloud">
-      <span class="word">Python</span>
-      <!-- Add more skill words as needed -->
-    </div>
+   
   </section>
 
   <section class="hero" style="margin-top: 10px; position: relative;">
     <h2 style="position: absolute; top: 0; left: 0;">Interests</h2>
     <p>Placeholder.</p>
-    <div id="word-cloud">
-      <span class="word">Python</span>
-      <!-- Add more skill words as needed -->
-    </div>
+    
   </section>
 
 
