@@ -115,8 +115,25 @@ header {
 
 
 .card-title {
-  color: #212121;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.card-text {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+ul li {
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
 }
 
 .overlay-icons-wrapper {
