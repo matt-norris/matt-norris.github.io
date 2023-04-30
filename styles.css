@@ -3,6 +3,8 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #212121;
+ 
 }
 
 /* Header */
@@ -11,6 +13,23 @@ header {
   background-color: #EEEEEE;
   border-bottom: 1px solid #ccc;
   border-radius: 10px;
+}
+
+
+
+/* Hero Section */
+.chero {
+  padding: 2rem;
+  background-image: linear-gradient(to right, #6EE7B7, #FFB692, #FFA6C1, #B28DFF, #8096FF);
+  background-size: 400% 400%;
+  animation: gradientTransition 50s ease infinite;
+ 
+}
+
+@keyframes gradientTransition {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Hero Section */
@@ -94,9 +113,19 @@ header {
   background-color: #fff;
 }
 
+
 .card-title {
   color: #212121;
   font-weight: 500;
+}
+
+.overlay-icons-wrapper {
+ 
+
+  
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust this value to add space between the icons */
 }
 
 .card-text {
@@ -279,7 +308,7 @@ body:before {
   height: 100%;
   z-index: -1;
   opacity: 0.9;
-  background-image: linear-gradient(45deg, #9BF6FF, #A0C4FF, #BDB2FF);
+ 
   background-position: 0% 50%;
 }
 
