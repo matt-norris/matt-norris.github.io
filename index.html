@@ -175,6 +175,14 @@
 
 
 </section>
+<script>
+  const navbarToggle = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+  navbarToggle.addEventListener('click', () => {
+    navbarCollapse.classList.toggle('show');
+  });
+  </script>
 </body>
 <script src="scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
