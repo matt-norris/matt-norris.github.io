@@ -10,13 +10,28 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 2rem;
+            background-color: #f2f2f2;
         }
         h1, h2 {
             color: #333;
         }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
         h2 {
+            font-size: 1.8rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid #333;
+        }
+        p {
+            font-size: 1.1rem;
+            text-align: justify;
         }
         ul {
             padding-left: 1.5rem;
@@ -24,9 +39,16 @@
         li {
             margin-bottom: 0.5rem;
         }
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
+    <div class="container">
     <h1>Exploring the Top JavaScript Frameworks of 2023</h1>
     <p>JavaScript has been the backbone of web development since its inception, and over time, several frameworks have been introduced to simplify and streamline the development process. Today, developers have a multitude of options when it comes to selecting a JavaScript framework that suits their needs. In this blog post, we will delve into the top JavaScript frameworks of 2023, discussing their strengths, weaknesses, and use cases.</p>
 
@@ -155,6 +177,18 @@
     
     <h2>Conclusion</h2>
     <p>In conclusion, the JavaScript landscape is filled with powerful and versatile frameworks that cater to different needs and preferences. React.js, Angular.js, Vue.js, Svelte.js, Next.js, and Nuxt.js are some of the most popular frameworks in 2023, each with its own strengths and weaknesses. When choosing a framework, it's essential to consider factors such as project size, complexity, learning curve, and the desired level of customization. By understanding the capabilities of each framework, you can make an informed decision and select the best option for your next web development project.</p>
+    <script>
+        function getRandomPastelColor() {
+            const hue = Math.floor(Math.random() * 360);
+            const pastelColor = `hsl(${hue}, 100%, 85%)`;
+            return pastelColor;
+        }
+    
+        document.querySelectorAll("h2").forEach((h2Element) => {
+            const randomColor = getRandomPastelColor();
+            h2Element.style.borderColor = randomColor;
+        });
+    </script>
 </body>
 </html>
 

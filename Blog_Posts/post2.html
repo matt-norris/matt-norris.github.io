@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advances in Machine Learning: Unlocking New Opportunities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+            background-color: #f2f2f2;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid #333;
+        }
+        p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
     <h1>Advances in Machine Learning: Unlocking New Opportunities</h1>
     <p>Machine learning (ML) has seen significant advancements in recent years, thanks to rapid technological progress, increasing amounts of data, and powerful computational resources. These developments have paved the way for breakthroughs in various domains such as natural language processing, computer vision, and reinforcement learning. In this article, we explore some of the most remarkable advances in machine learning and their potential impact on various industries.</p>
     
@@ -34,5 +77,17 @@
         
         <h2>Conclusion:</h2>
         <p>The advances in machine learning have unlocked new opportunities across various industries, transforming the way we interact with technology and the world around us. While these innovations bring immense potential, it is crucial to address the ethical and societal challenges associated with AI. By fostering responsible and inclusive AI development, we can harness the power of machine learning to drive meaningful change and create a better future.</p>
-</body>
+        <script>
+            function getRandomPastelColor() {
+                const hue = Math.floor(Math.random() * 360);
+                const pastelColor = `hsl(${hue}, 100%, 85%)`;
+                return pastelColor;
+            }
+        
+            document.querySelectorAll("h2").forEach((h2Element) => {
+                const randomColor = getRandomPastelColor();
+                h2Element.style.borderColor = randomColor;
+            });
+        </script>
+    </body>
 </html>        
