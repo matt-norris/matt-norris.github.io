@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 
-  const menuToggle = document.querySelector('.menu-toggle');
+  const menuToggle = document.querySelector('.navbar-toggler');
 const navMenu = document.querySelector('nav ul');
 
 menuToggle.addEventListener('click', () => {
@@ -30,27 +30,49 @@ function filterProjects(category) {
     button.addEventListener('click', () => filterProjects(button.dataset.filter));
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const wordCloud = document.getElementById('word-cloud');
-    const words = wordCloud.querySelectorAll('.word');
   
-    function positionWords() {
-      const radius = 75;
-    
-      for (let i = 0; i < words.length; i++) {
-        const angle = (i / (words.length / 2)) * Math.PI;
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
-    
-        words[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
-      }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".card-box");
+  
+    // Set initial opacity and translateY for all boxes
+    boxes.forEach((box) => {
+      box.style.opacity = 0;
+      box.style.transform = "translateY(50px)";
+    });
+  
+    // Function to animate a box
+    function animateBox(box) {
+      anime({
+        targets: box,
+        translateY: [50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: "easeOutExpo",
+      });
     }
-    
-    positionWords();
   
+    // Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateBox(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    );
   
-  
-    setInterval(positionWords, 10000);
+    // Observe each box
+    boxes.forEach((box) => {
+      observer.observe(box);
+    });
   });
   
   
