@@ -7,196 +7,206 @@
   <title>Home</title>
   <!-- Add your CSS and JavaScript files here -->
   <link rel="stylesheet" href="styles.css">
- 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   <style>
-    .hero {
-        margin-top: 10px;
+   
+   
+    .b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: black;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-image: linear-gradient(to right, #6EE7B7, #FFB692, #FFA6C1, #B28DFF, #8096FF);
+  background-size: 400% 400%;
+  animation: gradientTransition 50s ease infinite;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
         position: relative;
-    }
-    #skills-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 20%; /* Adjust the width to your desired size */
-        height: 100%;
-        border-radius: 10px;
-        
-    }
-    
-</style>
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
 </head> 
 <body>
-  <!-- Header -->
-  <header class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Homepage</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
+<!-- Header -->
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Homepage</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="b-example-divider"></div>
+<!-- Hero intro -->
+  <div class="bg-dark container-fluid px-4 py-5 text-white">
+
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/Assets/starkchat.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">GitHub</button>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <!-- Hero Section -->
-  <section class="chero bg-transparent" >
+  <div class="b-example-divider"></div>
    
-      <div class="container my-5">
-        <div class="row">
-          <div class="col-md-8 ">
-            <div class="card shadow-lg border-0">
-              <div class="card-body">
-    
-    
-    <h5 class="card-title">Hello!</h5>
-    <p class="card-text">Welcome to my portfolio website, where you can explore my skills and experience as a software engineer. I recently graduated from Michigan State University with a degree in computer science and am now looking for opportunities to put my skills to use in the industry. My portfolio showcases some of the projects I've worked on during my studies, as well as some personal projects that I've developed on my own time. As a software engineer, I am passionate about writing clean, efficient, and well-structured code, and I enjoy working on projects that challenge me to learn and grow. In addition to my technical skills, I also have strong communication and problem-solving skills that I believe are essential for success in this field. Thank you for taking the time to visit my portfolio, and I look forward to hearing from you</p>
-  </div>
-</div>
-</div>
-<div class="col-md-4 row-md-4" >
-  <div class="card shadow-lg border-0">
-    <div class="card-body">
+  <!-- Education Section -->
+  <div class="bg-dark container-fluid px-4 py-5 text-white">
 
-
-<h5 class="card-title">Image Goes Here</h5>
-<p class="card-text">Welcomme to visit my portfolio, and I look forward to hearing from you</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-  
-
-<div class="container my-5">
-  <div class="row">
-    <div class="col-md-4 ">
-      <div class="card shadow-lg border-0">
-          <div class="card-body">
-              <h5 class="card-title">Sparty Animation</h5>
-              <img class="rotate image-size" src="/Assets/sparty.webp" alt="Rotating Image">
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="pb-2 border-bottom">Education</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
           </div>
-      </div>
-  </div>
-    <div class="col-md-8 mx-auto ml-md-5">
-      <div class="card shadow-lg border-0 card-box">
-        <div class="card-body">
-          <h5 class="card-title">Education</h5>
-          <p class="card-text">
-            Michigan State University<br>
-            Expected May 2023<br>
-            Bachelor of Science, Major in Computer Science, Minor in Business<br>
-            East Lansing, MI
-          </p>
-          <ul>
-            <li>Dean's List for 4 semesters; 3.7 GPA</li>
-            <li>Relevant Coursework: Biometrics, Computer Security, Computer Networks, Data Structures/Algorithms, OOP</li>
-          </ul>
+          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+          <p>Name of School</p>
+          <p>Major: Your Major</p>
+          <p>Graduation Year: Your Graduation Year</p>
+          <p>GPA: Your GPA</p>
+          <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Relevant Coursework</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Additional Information</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container my-5">
-  <div class="row">
-    <div class="col-md-8 mx-auto ml-md-5">
-      <div class="card shadow-lg border-0 card-box">
-        <div class="card-body">
-          <h5 class="card-title">Skills</h5>
-          <p class="card-text">As a recent computer science graduate, I have developed a solid foundation in various technical skills that span across multiple programming languages, frameworks, and tools. I am always eager to learn new technologies and adapt to the ever-evolving landscape of software development. Here's a closer look at some of my key technical skills:</p>
-          <h6>Technical Skills:</h6>
-          <ul>
-            <li>Python: My go-to language for tackling complex problems and rapid prototyping, I have hands-on experience in using Python for various purposes such as data analysis, web scraping, and backend development. I am familiar with popular Python libraries such as NumPy, Pandas, Flask, and Django.</li>
-            <li>C++: Throughout my studies, I have used C++ for numerous projects and assignments. I am well-versed in the fundamentals of this powerful language, including object-oriented programming, memory management, and the Standard Template Library (STL).</li>
-            <li>JavaScript: As a full-stack developer, I have honed my JavaScript skills to create interactive and responsive web applications. I am proficient in both vanilla JavaScript and popular libraries and frameworks such as React, Angular, and Vue.js.</li>
-            <li>React Native: With the increasing demand for mobile applications, I have ventured into mobile app development using React Native. This framework allows me to leverage my existing JavaScript and React skills to build cross-platform mobile applications for iOS and Android.</li>
-            <li>Git/Version Control: A crucial skill for any software engineer, I am proficient in using Git for version control and collaboration. I am comfortable working with branches, merges, and pull requests in both individual and team settings.</li>
-            <li>Node.js:  have experience in using Node.js for server-side development, building scalable and efficient APIs and services. I am also familiar with Express.js and other popular Node.js libraries.</li>
-            <li>MSSQL: My knowledge of relational databases and SQL has been primarily centered around Microsoft SQL Server (MSSQL). I have experience designing, querying, and optimizing databases for various projects.</li>
-          </ul>
-          <h6>Soft Skills:</h6>
-          <ul>
-            <li>Leadership skills</li>
-            <li>Customer service</li>
-            <li>Organizational skills</li>
-            <li>Time management</li>
-            <li>Retail sales</li>
-          </ul>
+    <div class="b-example-divider"></div>
+
+
+
+    <!-- Skills Section-->
+    <div class="bg-dark container-fluid px-4 py-5 text-white">
+
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="/Assets/starkchat.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+          <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">GitHub</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="container my-5">
-  <div class="row">
-    <div class="col-md-8 mx-auto ml-md-5">
-      <div class="card shadow-lg border-0 card-box">
-        <div class="card-body">
-          <h5 class="card-title">Work Experience</h5>
-          <h6>Meijer</h6>
-          <p class="card-subtitle mb-2 text-muted">GM Clerk, East Lansing, MI (June 2022 – Dec. 2022)</p>
-          <ul>
-            <li>Set up and maintained the electronic booth equipment, including cameras, printers, and computer systems.</li>
-            <li>Operated the electronic booth software and ensured that it is functioning properly.</li>
-          </ul>
-          
-          <h5 class="card-title">Volunteer Experience</h5>
-          <h6>St. Joseph Regional Medical Center</h6>
-          <p class="card-subtitle mb-2 text-muted">Healthcare Volunteer, Mishawaka, IN (August 2017 – May 2018)</p>
-          <ul>
-            <li>Assisted hospital staff with tasks such as directing patients, answering phones, and transporting materials.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container my-5">
-  <div class="row">
-    <div class="col-md-8 mx-auto ml-md-5">
-      <div class="card shadow-lg border-0 card-box bg-dark text-white">
-        <div class="card-header bg-secondary text-white">
-          <h5 class="mb-0">Interests</h5>
-        </div>
-        <div class="card-body">
-          <pre class="bg-dark text-white border-0 p-2">
-            <code>
-              $ ls interests
-              > RPGs
-              > Sustainability
-              > Politics
-              > Mixed Martial Arts
-              > Reddit
-              > Swimming
-              > Traveling
-              > Cooking
-              > Euphoria
-            </code>
-          </pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 

@@ -7,13 +7,7 @@ body {
  
 }
 
-/* Header */
-header {
-  padding: 1rem;
-  background-color: #EEEEEE;
-  border-bottom: 1px solid #ccc;
-  border-radius: 10px;
-}
+
 
 @keyframes rotate {
   0% { transform: rotate(0deg); }
@@ -28,6 +22,7 @@ header {
   width: 200px;  /* adjust as needed */
   height: auto;  /* maintains the aspect ratio */
 }
+
 
 
 /* Hero Section */
@@ -108,10 +103,12 @@ header {
 }
 
 .navbar {
-  box-shadow: 0 4px 6px rgba(0,0,0,.1);
-  border-bottom: 1px solid #dee2e6;
+  box-shadow: none; /* Remove the shadow */
+  border-bottom: none; /* Remove the border */
   
+  /* Other existing styles... */
 }
+
 
 .navbar-brand {
   font-weight: bold;
