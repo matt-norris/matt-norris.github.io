@@ -156,15 +156,10 @@ ul li {
 }
 
 .card-text {
-  color: #757575;
+  color: #ab3636;
 }
 /* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  border-top: 1px solid #ccc;
-}
+
 
   /* Projects Section */
 .projects {
