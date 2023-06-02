@@ -8,9 +8,15 @@
   <!-- Add your CSS and JavaScript files here -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
   <style>
    
-   
+   .scrollable-div {
+  max-height: 300px; /* Or any height you want */
+  overflow-y: auto; /* This makes it scrollable when content exceeds the max-height */
+}
     .b-example-divider {
   width: 100%;
   height: 3rem;
@@ -93,6 +99,9 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
+      #myImage {
+      border-radius: 50%;
+    }
     </style>
 </head> 
 <body>
@@ -125,14 +134,16 @@
 
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="/Assets/starkchat.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img id="myImage" src="/Assets/home.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy" style="border:2px solid white;">
+
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi There!</h1>
         <p class="lead">I'm Matt, a recent Computer Science graduate with a passion for problem-solving and coding. I've gained skills in Python, JavaScript, C++, and more, backed by a strong foundation in teamwork and communication. Explore my projects, check out my skills, and connect with me for opportunities. Let's create impactful software solutions together.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">My GitHub</button>
+          <a href="mailto:norrism7@msu.edu" target="_blank" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</a>
+
+          <a href="https://github.com/matt-norris" target="_blank" class="btn btn-outline-secondary btn-lg px-4">My GitHub</a>
         </div>
       </div>
     </div>
@@ -145,46 +156,188 @@
 
     <div class="container px-4 py-5" id="featured-3">
       <h2 class="pb-2 border-bottom">Education</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-transparent fs-2 mb-3">
+            <img src="/Assets/msu.png" alt="Your Image" width="42" height="45">
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Name of School</p>
-          <p>Major: Your Major</p>
-          <p>Graduation Year: Your Graduation Year</p>
-          <p>GPA: Your GPA</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-          </a>
+          <h3 class="fs-2 text-body-emphasis">Academic Background</h3>
+    
+          <input class="list-group-item-check pe-none " type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios1" value="">
+          <label class="list-group-item rounded-3  bg-dark text-white" for="listGroupCheckableRadios1">
+            University
+            <span class="d-block small opacity-50">Michigan State University</span>
+          </label>
+          <input class="list-group-item-check pe-none " type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios2" value="">
+          <label class="list-group-item rounded-3  bg-dark text-white" for="listGroupCheckableRadios2">
+            Degree
+            <span class="d-block small opacity-50">Major in Computer Science, Minor in Business</span>
+          </label>
+    <input class="list-group-item-check pe-none " type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios3" value="">
+    <label class="list-group-item rounded-3  bg-dark text-white" for="listGroupCheckableRadios3">
+      Graduation Date
+      <span class="d-block small opacity-50">May 2023</span>
+    </label>
+    <input class="list-group-item-check pe-none " type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios4" value="">
+    <label class="list-group-item rounded-3  bg-dark text-white" for="listGroupCheckableRadios4">
+     GPA
+      <span class="d-block small opacity-50">3.7 GPA</span>
+    </label>
+    <input class="list-group-item-check pe-none " type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios5" value="">
+    <label class="list-group-item rounded-3  bg-dark text-white" for="listGroupCheckableRadios5">
+      Honors
+      <span class="d-block small opacity-50">Dean's List for 5 Semesters</span>
+    </label>
         </div>
+
+     <!-- New Image Column -->
+     <!-- <div class="feature col d-flex align-items-center justify-content-center">
+      <img src="/Assets/library.jpg" alt="Describe your image" class="img-fluid">
+    </div> -->
+    
+
+        
         <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-transparent fs-2 mb-3">
+            <img src="/Assets/book-stack.png" alt="Your Image" width="42" height="42">
           </div>
           <h3 class="fs-2 text-body-emphasis">Relevant Coursework</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-          </a>
-        </div>
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+          <div class="scrollable-div">
+            <div class="list-group">
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/cyber-security.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div class>
+                    <h6 class="mb-0">Computer Security</h6>
+                    <p class="mb-0 opacity-75">Theory and practice of security engineering. Security protocols. Cryptography and cryptanalysis. Smartcards. Network security and intrusion detection. Common system attacks.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2023</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/smartphone.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Mobile App Development</h6>
+                    <p class="mb-0 opacity-75">Exploration and application of mobile app development, understanding unique device constraints, utilization of location-based services and multimedia communications, primary focus on Android.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2023</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/partners.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Capstone/Collaborative Design</h6>
+                    <p class="mb-0 opacity-75">Team-based development and solution creation for software/hardware problems with client focus, engaging in a complete design cycle encompassing specification, design, testing, maintenance, and documentation, with emphasis on professionalism, ethics, and communication.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2023</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/biometric-recognition.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Biometrics and Pattern Recognition</h6>
+                    <p class="mb-0 opacity-75">Automated techniques for feature extraction and pattern matching with an emphasis on biometric recognition technologies, such as face, fingerprint, and iris recognition, including their underlying algorithms and practical applications.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/computer.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Computer Networks</h6>
+                    <p class="mb-0 opacity-75">Computer network architectures and models. Physical media and signaling. Data link protocols. Medium access control. Routing and IP. Transport services including TCP/UDP. Network applications. Local-area and wide-area networks.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/process.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Media Processing and Computing</h6>
+                    <p class="mb-0 opacity-75">Basic operations for processing images, video, and audio. Devices for input and output. Data formats and compression. Tools for processing images and sound. Multimedia authoring tools. Applications.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/data-complexity.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Computer Systems</h6>
+                    <p class="mb-0 opacity-75">Process and processor management. Concurrent processes and threads. Memory management and the memory hierarchy. Networking and network protocols. Secure programming and communication methods.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/neural.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Algorithms and Data Structures</h6>
+                    <p class="mb-0 opacity-75">Study of common data structures and algorithms, covering asymptotic analysis, recursion, sorting techniques, diverse data structures like lists, trees, graphs, hash tables, and more, alongside graph algorithms and complexity analysis; includes hands-on projects, IDE usage, correctness checking techniques, and industry-relevant practices.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/illustration.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Software Design</h6>
+                    <p class="mb-0 opacity-75">Focused study on object-oriented software design, emphasizing reliability, reusability, and maintainability, with hands-on experience in design patterns, implementation techniques, professional ethics, and effective communication in programming.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2022</small>
+                </div>
+              </a>
+             
+
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/computer-2.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0"> Computer Organization and Architecture</h6>
+                    <p class="mb-0 opacity-75">Boolean algebra and digital logic. Combinational and sequential circuits. Representations of data and instructions. Architecture and major components of computer systems. Assembly language programming and interfacing to high level languages. Assembler and linker processing.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2021</small>
+                </div>
+              </a>
+
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/matrix.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Matrix Algebra</h6>
+                    <p class="mb-0 opacity-75">Vectors, matrices, and linear transformations. Operations on matrices, inner products, dimension, eigenvalues and eigenvectors. Applications to systems of equations and to geometry.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2021</small>
+                </div>
+              </a>
+
+              <a href="#" onclick="event.preventDefault();" class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-dark" aria-current="true">
+                <img src="/Assets/calculating.png" alt="twbs" width="32" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between text-white">
+                  <div>
+                    <h6 class="mb-0">Discrete Structures</h6>
+                    <p class="mb-0 opacity-75">Propositional and first order logic. Equivalence and methods of proof. Basics of counting. Set operations, relations, functions. Grammars and finite state automata. Discrete probability. Applications to computer science and engineering.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">2020</small>
+                </div>
+              </a>
+              
+
+            </div>
+            
           </div>
-          <h3 class="fs-2 text-body-emphasis">Additional Information</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-          </a>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
     <div class="b-example-divider"></div>
 
@@ -195,59 +348,80 @@
   
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+         <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Python</h3>
             <p>A versatile high-level programming language known for its clear syntax and readability. I have experience in Python for scripting, web development, and data analysis tasks.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">JavaScript</h3>
             <p>A powerful scripting language used primarily for enhancing web interactivity and development. I have proficiency in both client-side and server-side JavaScript coding.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <path fill="#D26383" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path><path fill="#9C033A" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path><path d="M82.1 61.8h5.2v-5.3h4.4v5.3H97v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4zm18.5 0h5.2v-5.3h4.4v5.3h5.3v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4z" fill="#fff"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">C++</h3>
             <p>An object-oriented programming language known for its efficiency and control over system resources. I am familiar with using C++ in areas like software development, game development, and system programming.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+          <path d="M55.25 4.15c-.33.11-2.1.68-3.96 1.29-10 3.27-17.08 7.06-18.84 10.06-.67 1.15-.8 2.08-.4 3.01.44 1.05 1.25 1.84 3.47 3.41 1.04.73 2.81 2.26 3.96 3.41 5.5 5.49 8.17 12.22 7.87 19.83-.34 8.56-4.35 17.12-12.03 25.69-2.68 2.99-5.43 5.48-10.71 9.71-4.4 3.52-6.79 5.8-8.42 8.01-4.99 6.8-3.66 12.86 3.96 17.92 6.72 4.47 18.56 8.19 32.51 10.21 4.68.68 9.97 1.11 11.24.92l.89-.13 1.4-2.52c7.08-12.75 10.66-24.77 11.09-37.21.19-5.55-.51-12.12-1.7-15.96-.22-.69-.38-1.28-.35-1.3.02-.02 2-.61 4.4-1.33 12.61-3.76 24.81-6.72 34.89-8.47 1.96-.34 3.64-.69 3.73-.78.54-.53-1.03-2.98-3.58-5.61-9.43-9.73-26.09-17.14-45.64-20.29-3.77-.61-4.23-.83-5.63-2.68-2.22-2.94-4.31-7.97-7.16-17.17-.09-.28-.18-.28-.99-.02zm1.3 3.46c1.1 2.99 1.77 5.34 1.77 6.17v.65l-.93-.11c-5.04-.58-13.08-1.83-14.79-2.29-.44-.12-.69-.29-.61-.42.13-.21 1.84-1.03 6.92-3.34 4.74-2.15 6.54-2.95 6.68-2.96.06 0 .49 1.03.96 2.3zm-10.66 6.31c6.15 1.29 10.63 2.1 11.62 2.1.96 0 .85.08-3.67 2.84-3.49 2.12-3.89 2.32-4.77 2.32h-.96l-2.58-2.62c-3.13-3.17-5.25-5.49-5.25-5.75 0-.11.06-.14.15-.09.08.04 2.55.59 5.46 1.2zm-4.54 2.91c1.51 1.76 2.68 3.24 2.62 3.31-.13.13-4.44-.94-7.08-1.75-2.3-.71-2.58-.95-1.97-1.73.4-.52 3.37-3 3.59-3.01.06-.01 1.33 1.41 2.84 3.18zm19.62 3.65c.6 1.43 1.06 2.59 1.04 2.61-.03.02-8.11-1.23-8.82-1.37-.15-.03 1.22-.96 3.06-2.08s3.41-1.97 3.49-1.88c.08.07.63 1.29 1.23 2.72zm-17.62 2.71c.16.16 2.09 6.36 2 6.44-.03.03-.95-1.03-2.04-2.38-1.1-1.35-2.75-3.24-3.7-4.23l-1.71-1.79 2.67.92c1.46.51 2.72.98 2.78 1.04zm7.72.83c3.35.48 6.13.91 6.18.96.04.05-1.98 1.62-4.5 3.5-2.52 1.87-4.6 3.38-4.63 3.35-.03-.03-.28-.81-.56-1.74-.28-.93-1-2.86-1.59-4.31-.59-1.45-1.05-2.63-1.03-2.63.02 0 2.78.4 6.13.87zm8.42 2.68c.74 1.73 1.03 3.39 1.15 6.7.06 1.78.07 3.23.01 3.23-.06 0-1.12-.37-2.35-.81-2.46-.89-7.28-2.48-7.85-2.59-.25-.05.91-1.16 3.96-3.79 2.38-2.05 4.4-3.72 4.49-3.72.1.01.36.45.59.98zm8.64.42c3.71.76 6.95 1.44 7.21 1.5.37.09-.52.65-4.44 2.8-2.7 1.48-5.76 3.16-6.8 3.75-1.05.59-1.91 1.04-1.93 1.02-.02-.02.09-.57.24-1.23.56-2.4.21-5.4-.91-7.79-.33-.69-.6-1.3-.6-1.35 0-.17.67-.05 7.23 1.3zm10.11 4.53c-.19.84-.6 2.27-.93 3.2-.71 2.04-3.3 7.33-3.65 7.47-.14.06-1.36-.51-2.69-1.25-1.33-.74-3.26-1.72-4.27-2.17l-1.84-.82 6.79-4.35c5.63-3.61 6.8-4.29 6.86-3.97.04.2-.08 1.05-.27 1.89zm4.96-1.55c7.04 2.02 14.47 4.75 14.04 5.16-.09.08-1.01.39-2.04.68-5.31 1.51-12.7 4.06-16.16 5.58-1.07.47-2 .82-2.05.77-.05-.05.37-1.61.94-3.45 1.11-3.63 2.4-8.53 2.4-9.16 0-.28.1-.37.35-.3.18.05 1.31.37 2.52.72zm-30.27 7.3c1.61.53 3.48 1.24 4.17 1.59 1.25.63 1.26.64.9 1.03-.64.71-7.63 7.22-7.83 7.29-.1.04-.18-.95-.18-2.38-.01-2.48-.29-6.95-.5-7.95-.16-.73-.03-.72 3.44.42zm44.7 1.29c-1.54 2.54-4.07 6.16-5.9 8.44-1.87 2.34-5.82 6.74-6.05 6.74-.09 0-.66-.71-1.27-1.59-2.25-3.21-4.86-5.99-7.15-7.61-.22-.15-.35-.32-.3-.37.05-.05 3.81-1.43 8.33-3.07 9.16-3.32 13.19-4.67 13.44-4.49.02.03-.47.9-1.1 1.95zm5.73-.43c6.32 4.41 10.62 7.98 12.18 10.11.39.54.68 1 .64 1.03-.04.03-2.07.26-4.53.5-9.81.97-16.8 1.95-20.5 2.89-.99.25-1.82.44-1.83.43-.02-.02.63-.82 1.46-1.81 4.28-5.13 8.14-10.47 9.58-13.24.38-.73.75-1.33.83-1.33.07-.01 1.04.63 2.17 1.42zm-35.43 5.47c1.21.65 2.14 1.25 2.09 1.35-.09.18-10.76 6.02-10.85 5.94-.02-.02.53-1.77 1.23-3.91s1.38-4.46 1.51-5.17l.24-1.3 1.8.96c1 .53 2.77 1.48 3.98 2.13zm-8.93.34c-1.03 3.57-3.12 8.17-4.07 8.97-.22.18-.65-.07-2.06-1.21-.99-.8-2-1.59-2.27-1.77-.26-.18-.45-.37-.41-.42.73-.73 9.23-7.58 9.27-7.47.03.07-.18.93-.46 1.9zm19.32 6.21c1.61 1.07 5.17 4.26 4.98 4.46-.05.05-3.67 1.23-8.03 2.6-4.36 1.38-9.22 2.94-10.8 3.47-1.59.53-2.89.95-2.9.93-.02-.02 1.09-1.28 2.46-2.81 3.57-3.98 7.24-8.25 8.54-9.93l1.12-1.45 1.47.79c.79.44 2.23 1.32 3.16 1.94zm-8.26-2.29c-.1.13-1.06 1.35-2.14 2.72-1.08 1.36-3.66 4.68-5.76 7.37l-3.81 4.9-.13-.83c-.24-1.61-1.1-4.74-1.59-5.81l-.49-1.07 2.42-1.21c2.5-1.25 7.71-4.08 10.15-5.5 1.54-.9 1.64-.94 1.35-.57zm-20.21 5.92c.99.51 1.92 1.17 1.92 1.38 0 .32-6.45 5.3-6.62 5.11-.04-.04.54-1.19 1.29-2.56.76-1.37 1.52-2.9 1.7-3.42.18-.52.46-.94.6-.94.16 0 .66.2 1.11.43zm5.5 6.13c.45.87.91 3.32.67 3.54-.1.09-2.76 1.35-5.93 2.8-3.17 1.45-7.28 3.4-9.17 4.34-1.88.94-3.31 1.6-3.17 1.48.14-.13 2.21-1.86 4.61-3.86 4.64-3.86 9.93-8.47 10.9-9.49l.58-.61.57.55c.32.3.74.86.94 1.25zm-5.21-.05c-.46.41-2.94 2.58-5.5 4.8C42.08 67 39 69.68 37.8 70.73c-2.42 2.11-2.42 2.11.67-1.92 2.39-3.12 3.64-4.28 7.07-6.58 1.67-1.12 4.99-2.99 5.31-2.99.07-.01-.25.34-.71.75zm24.03 2.12c.13.65.28 2.69.35 4.51l.12 3.32-.77-.36c-2.66-1.23-10.13-5.44-9.85-5.55 1.63-.65 9.7-3.33 9.79-3.24.07.07.23.66.36 1.32zm-6.34 5.94c3.11 1.83 5.68 3.35 5.72 3.38.04.03-.37.37-.88.75-.99.73-11.54 6.18-11.68 6.04-.04-.04.1-.95.31-2 .43-2.12.82-8.44.63-10.45-.06-.71-.04-1.21.06-1.15.11.06 2.73 1.6 5.84 3.43zm-8.6-1.34c.24 1.97-.05 5.93-.58 7.99-.63 2.42-.99 3.43-1.26 3.52-.37.13-2.67-1.97-4.08-3.72-1.42-1.76-3.28-5.08-3-5.35.17-.16 8.39-3.55 8.64-3.56.08-.01.21.5.28 1.12zm-10.08 4.95c.87 1.8 2.86 4.4 5.04 6.6 1.4 1.41 1.75 1.87 1.53 2.01-.98.66-5.35 2.71-8.11 3.79-3.35 1.32-7.7 2.82-7.8 2.7-.04-.04.96-1.86 2.22-4.04 2.73-4.74 6.18-11.44 6.18-11.99 0-.7.29-.42.94.93zm-5.16.11c-.05.14-.47 1.18-.92 2.33-1.94 4.92-5.71 11.6-6.55 11.6-.65 0-1.61-3.89-1.88-7.63l-.14-1.88 4.61-2.33c2.54-1.28 4.69-2.33 4.8-2.33.09-.01.13.1.08.24zm30.78 4.55c.02 2.83-1.17 9.68-1.8 10.37-.26.29-3.19-.79-5.82-2.15-2.36-1.22-6.24-3.63-6.24-3.87 0-.07.59-.37 1.33-.68 1.4-.59 7.91-4.07 10.67-5.7l1.59-.94.14.72c.05.39.12 1.42.13 2.25zm-43.43 3.27c.27 2.24.96 4.98 1.82 7.16.35.89.6 1.66.56 1.7-.34.31-14.19 4.12-16.02 4.41l-.87.14.13-.67c.19-.95 1.53-3.69 2.53-5.17 1.24-1.84 4.31-4.92 6.34-6.35 1.51-1.07 5.15-3.19 5.26-3.07.01.01.13.84.25 1.85zm31.42 4.72c4.28 2.05 5.9 2.76 7.95 3.47l1.57.54-.99.5c-5.61 2.84-15.53 6.89-18.1 7.39-.57.11-.65.08-.54-.2.44-1.15 6.36-13.38 6.47-13.38.07-.01 1.72.76 3.64 1.68zm-7.53-.46c-.3 1.44-1.93 6.11-2.88 8.23-.82 1.84-2.72 5.43-3.06 5.77-.15.15-3.53-1.76-5.13-2.9-1.8-1.28-5.74-5.08-5.63-5.43.04-.13 2.44-1.05 5.33-2.05 6.09-2.1 9.5-3.37 10.49-3.88.96-.5 1.04-.47.88.26zm17.03 6.45c-.06.42-.4 2.26-.77 4.12-1.16 5.83-2.57 9.81-3.47 9.81-1.24 0-9.73-2.06-12.47-3.03-1.86-.66-3.47-1.41-4-1.88-.33-.29-.16-.39 2.28-1.39 7.85-3.2 16.9-7.28 17.88-8.06.57-.45.66-.39.55.43zm-39.72 1.78c-.89 1.59-2.72 4.22-6.2 8.92l-2.97 4-.89-.64c-1.25-.89-3.23-3.05-4.06-4.42-.89-1.47-1.5-3.28-1.57-4.66l-.06-1.07 1.47-.15c1.99-.2 7.55-1.35 11.52-2.39 1.8-.47 3.3-.83 3.34-.8.03.04-.23.58-.58 1.21zm8.63 4.11c.99.71 2.35 1.61 3.05 2.02l1.27.74-.57.24c-.32.13-4.93 1.81-10.26 3.74-9.1 3.29-9.7 3.48-9.95 3.14-.15-.2-.25-.41-.23-.48.02-.07 2.48-3.24 5.47-7.07l5.43-6.95 2 1.67c1.12.93 2.8 2.24 3.79 2.95zm2.24 10.45c-1.99 2.97-3.67 5.48-3.73 5.56-.15.2-3.33-.55-5.71-1.34-2.5-.84-5.58-2.4-6.78-3.43l-.87-.75 1.96-.53c8.03-2.19 18.65-5 18.7-4.96.04.01-1.58 2.48-3.57 5.45zm9.56-4.5c4.25 1.46 8.13 2.29 13.16 2.83l1.39.15-3.75 1.35c-9.36 3.38-16.94 5.75-20.76 6.49-1.07.21-2.05.38-2.16.38-.11 0 .66-1.05 1.71-2.32 2.86-3.49 5.96-7.46 6.78-8.68.4-.59.8-1.09.89-1.09.09.01 1.31.4 2.74.89zm13.95 7.88c-1.61 4.16-2.79 6.69-3.21 6.85-.8.31-11.85-1.32-15.22-2.23-2.24-.61-3.67-1.2-3.25-1.35.16-.06 1.76-.43 3.57-.84 5.85-1.32 14.77-4.03 18.46-5.61.48-.2.9-.35.93-.32.02.03-.55 1.6-1.28 3.5z"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">MSSQL</h3>
-            <p>A relational database management system developed by Microsoft. I am skilled in writing SQL queries, designing databases, and managing data stored in MS SQL Server.</p>
+            <p>A relational database management system developed by Microsoft. I have experience in writing SQL queries, designing databases, and managing data stored in MS SQL Server.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Git/Version Control</h3>
             <p>A widely used distributed version control system. I have experience in using Git for tracking changes in source code during software development, enabling efficient collaboration and version management.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+<g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"></circle><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"></path></g>
+
+          </svg>
           <div>
-            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">React Native</h3>
-            <p>A JavaScript framework for building native mobile apps. I've built applications using React Native, allowing for cross-platform development and code reuse.</p>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">React Native</h3>
+              <p>A JavaScript framework for building native mobile apps. I've built applications using React Native, allowing for cross-platform development and code reuse.</p>
           </div>
-        </div>
+      </div>
+      
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"/></svg>
+          <svg viewBox="0 0 128 128" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <path fill="#83CD29" d="M112.678 30.334L68.535 4.729c-2.781-1.584-6.424-1.584-9.227 0L14.82 30.334C11.951 31.985 10 35.088 10 38.407v51.142c0 3.319 1.992 6.423 4.862 8.083l11.729 6.688c5.627 2.772 7.186 2.772 9.746 2.772 8.334 0 12.662-5.039 12.662-13.828v-50.49C49 42.061 49.445 41 48.744 41h-5.622C42.41 41 41 42.061 41 42.773v50.49c0 3.896-3.616 7.773-10.202 4.48L18.676 90.73c-.422-.23-.676-.693-.676-1.181V38.407c0-.482.463-.966.891-1.213l44.378-25.561a1.508 1.508 0 011.415 0l43.963 25.555c.421.253.354.722.354 1.219v51.142c0 .488.092.963-.323 1.198l-44.133 25.576c-.378.227-.87.227-1.285 0l-11.317-6.749c-.341-.198-.752-.269-1.08-.086-3.145 1.783-3.729 2.02-6.679 3.043-.727.253-1.799.692.408 1.929l14.798 8.754a9.29 9.29 0 004.647 1.246 9.303 9.303 0 004.666-1.246l43.976-25.582c2.871-1.672 4.322-4.764 4.322-8.083V38.407c-.001-3.319-1.452-6.414-4.323-8.073zM77.727 81.445c-11.727 0-14.309-3.235-15.17-9.066-.102-.628-.634-1.379-1.274-1.379h-5.73c-.709 0-1.28.86-1.28 1.566 0 7.466 4.06 16.512 23.454 16.512 14.038 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.104 0 12.46 1.954 13.841 8.091.119.577.646.991 1.241.991h5.754c.354 0 .691-.143.939-.396.241-.272.367-.613.336-.979-.893-10.569-7.913-15.494-22.112-15.494-12.632 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.956-3.978 7.067-13.308 7.067z"></path>
+        </svg>
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Node.js</h3>
             <p>A JavaScript runtime built on Chrome's V8 engine, used for developing server-side web applications. I have used Node.js in combination with various popular frameworks and libraries for efficient back-end development.</p>
           </div>
         </div>
+
         <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2406 2406" width="28px" height="28px" class="bi text-body-secondary flex-shrink-0 me-3">
+    <path d="M1 578.4C1 259.5 259.5 1 578.4 1h1249.1c319 0 577.5 258.5 577.5 577.4V2406H578.4C259.5 2406 1 2147.5 1 1828.6V578.4z" fill="#74aa9c"/>
+    <path d="M1107.3 299.1c-198 0-373.9 127.3-435.2 315.3C544.8 640.6 434.9 720.2 370.5 833c-99.3 171.4-76.6 386.9 56.4 533.8-41.1 123.1-27 257.7 38.6 369.2 98.7 172 297.3 260.2 491.6 219.2 86.1 97 209.8 152.3 339.6 151.8 198 0 373.9-127.3 435.3-315.3 127.5-26.3 237.2-105.9 301-218.5 99.9-171.4 77.2-386.9-55.8-533.9v-.6c41.1-123.1 27-257.8-38.6-369.8-98.7-171.4-297.3-259.6-491-218.6-86.6-96.8-210.5-151.8-340.3-151.2zm0 117.5-.6.6c79.7 0 156.3 27.5 217.6 78.4-2.5 1.2-7.4 4.3-11 6.1L952.8 709.3c-18.4 10.4-29.4 30-29.4 51.4V1248l-155.1-89.4V755.8c-.1-187.1 151.6-338.9 339-339.2zm434.2 141.9c121.6-.2 234 64.5 294.7 169.8 39.2 68.6 53.9 148.8 40.4 226.5-2.5-1.8-7.3-4.3-10.4-6.1l-360.4-208.2c-18.4-10.4-41-10.4-59.4 0L1024 984.2V805.4L1372.7 604c51.3-29.7 109.5-45.4 168.8-45.5zM650 743.5v427.9c0 21.4 11 40.4 29.4 51.4l421.7 243-155.7 90L597.2 1355c-162-93.8-217.4-300.9-123.8-462.8C513.1 823.6 575.5 771 650 743.5zm807.9 106 348.8 200.8c162.5 93.7 217.6 300.6 123.8 462.8l.6.6c-39.8 68.6-102.4 121.2-176.5 148.2v-428c0-21.4-11-41-29.4-51.4l-422.3-243.7 155-89.3zM1201.7 997l177.8 102.8v205.1l-177.8 102.8-177.8-102.8v-205.1L1201.7 997zm279.5 161.6 155.1 89.4v402.2c0 187.3-152 339.2-339 339.2v-.6c-79.1 0-156.3-27.6-217-78.4 2.5-1.2 8-4.3 11-6.1l360.4-207.5c18.4-10.4 30-30 29.4-51.4l.1-486.8zM1380 1421.9v178.8l-348.8 200.8c-162.5 93.1-369.6 38-463.4-123.7h.6c-39.8-68-54-148.8-40.5-226.5 2.5 1.8 7.4 4.3 10.4 6.1l360.4 208.2c18.4 10.4 41 10.4 59.4 0l421.9-243.7z" fill="white"/>
+</svg>
+
           <div>
             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">ChatGPT</h3>
-            <p>PAn advanced language model developed by OpenAI. I have experience in integrating and fine-tuning ChatGPT for various applications, such as chatbots, and Alexa skills.</p>
+            <p>An advanced language model developed by OpenAI. I have experience in integrating and fine-tuning ChatGPT for various applications, such as chatbots, and Alexa skills.</p>
           </div>
         </div>
       </div>
@@ -266,33 +440,37 @@
           <h2 class="fw-bold text-body-emphasis">Diverse Skill Set and Eager to Grow</h2>
           <p class="text-body-secondary">Leveraging my recent degree in Computer Science and my customer service experience in the retail sector, I bring a unique blend of technical acumen, problem-solving skills, and customer-centric mindset to the table. While I have not yet had the opportunity to work as a software engineer, I am no stranger to hard work, teamwork, and facing challenges head-on. Through my coursework and personal projects, I have acquired solid proficiency in Python, JavaScript, C++, and several other technologies.</p>
           <p class="text-body-secondary">I am eager to apply my knowledge in a practical setting and am confident in my ability to learn quickly and adapt to new environments and technologies. I look forward to contributing to a dynamic software engineering team where I can grow my skills and make a significant impact.</p>
-          <a href="#" class="btn btn-primary btn-lg">View My Projects</a>
+          <a href="https://github.com/matt-norris?tab=repositories" target="_blank" class="btn btn-primary btn-lg px-4 me-md-2">View My Projects</a>
         </div>
   
         <div class="col">
           <div class="row row-cols-1 row-cols-sm-2 g-4">
             <div class="col d-flex flex-column gap-2">
               <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                <svg class="bi" width="1em" height="1em">
-                  <use xlink:href="#collection" />
-                </svg>
+                <img src="/Assets/blue.png" alt="Your Image" width="302" height="22">
+                
               </div>
               <h4 class="fw-semibold mb-0 text-body-emphasis">Meijer</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <p class="text-body-secondary">June 2022 – Dec. 2022<br>GM Clerk<br>East Lansing, MI<br>
+                &bull; Set up and maintained the electronic booth hardware, including cameras, printers, and computer systems.<br>
+                &bull; Maintained the electronic booth software, ensuring its optimal functionality and seamless operation.
+              </p>
             </div>
+            
   
     
   
   
             <div class="col d-flex flex-column gap-2">
               <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                <svg class="bi" width="1em" height="1em">
-                  <use xlink:href="#table" />
-                </svg>
+                <img src="/Assets/green.png" alt="Your Image" width="302" height="22">
               </div>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">St. Joe Hospital</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">St. Joseph Regional Medical Center</h4>
+              <p class="text-body-secondary">August 2017 – May 2018<br>Healthcare Volunteer<br>Mishawaka, IN<br>
+                &bull; Assisted hospital staff with tasks such as directing patients, answering phones, and transporting materials.
+              </p>
             </div>
+            
           </div>
         </div>
       </div>
